@@ -4,6 +4,7 @@ public class question {
     private int ansid;
     private boolean ans;
 
+
     public int getAnsid() {
         return ansid;
     }
