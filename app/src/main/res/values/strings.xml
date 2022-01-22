@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SIMPLE QUIZ</string>
+    <string name="yes">YES</string>
+    <string name="NO">NO</string>
+    <string name="question1"> Bill Gates is the founder of Amazon.
+</string>
+    <string name="question2">Mice have more bones than humans.</string>
+    <string name="question3"> The capital of Australia is Sydney.
+</string>
+    <string name="question4">A cube has 16 straight edges in total</string>
+    <string name="question5"> Lungs are the largest internal organ in the human body</string>
+    <string name="question6"> The Statue of Liberty was a gift of France for the United States of America in 1886.</string>
+
+</resources>

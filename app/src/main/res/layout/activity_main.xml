@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorprimarydark"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:src="@drawable/ic_launcher_foreground"
+        android:adjustViewBounds="true"
+        android:maxHeight="300dp"
+        android:maxWidth="300dp">
+
+    </ImageView>
+    <TextView
+        android:id="@+id/txtque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:text="@string/question1"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:padding="10dp"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp">
+    <Button
+        android:id="@+id/btnyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#45D510"
+        android:text="YES" />
+
+    <Button
+        android:id="@+id/btnno"
+        android:backgroundTint="#EC0606"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NO"/>
+</LinearLayout>
+
+    </LinearLayout>
