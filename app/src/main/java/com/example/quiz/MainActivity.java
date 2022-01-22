@@ -2,6 +2,7 @@ package com.example.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +25,7 @@ new question(R.string.question1 ,false),
             new question(R.string.question6,true)
 
     };
-    private Integer images[]=[R.mipmap.billgates,R.mipmap.mice,R.mipmap.sydney,R.mipmap.cube,R.mipmap.lungs,R.mipmap.p6]
+    private int[] images;
 
 
     @Override
@@ -35,9 +36,12 @@ new question(R.string.question1 ,false),
         btnyes=findViewById(R.id.btnyes);
         txtque=findViewById(R.id.txtque);
         img=findViewById(R.id.img);
-        img.setImageResource(images[CurrentIndex]);
         btnyes.setOnClickListener(this);
         btnno.setOnClickListener( this);
+        images= new int[]{
+                R.mipmap.billgates,R.mipmap.mice,R.mipmap.sydney,R.mipmap.cube,R.mipmap.lungs,R.mipmap.p6
+        };
+        img.setImageResource(images[CurrentIndex]);
 
     }
 
@@ -58,17 +62,18 @@ new question(R.string.question1 ,false),
 
     }
     private  void updateque(){
-        if(CurrentIndex<questionbank.length)
+        if(CurrentIndex<questionbank.length){
             txtque.setText(questionbank[CurrentIndex].getAnsid());
         img.setImageResource(images[CurrentIndex]);
 
     }else{
-        txtque.setText("TOTAL MARKS");
+        txtque.setText("TOTAL MARKS " + correctcount);
         btnno.setVisibility(View.GONE);
         btnyes.setVisibility(View.GONE);
         img.setVisibility(View.GONE);
 
-    }
+    }}
+
     private static int correctcount=0;
     private void checkAns(boolean uans){
         boolean isTrue=questionbank[CurrentIndex].isAns();
@@ -79,4 +84,3 @@ new question(R.string.question1 ,false),
     }
 
 
-}
